@@ -8,7 +8,8 @@ from requests import get
 app = Flask(__name__, static_folder='console-frontend/build/')
 
 # Setting CORS so it allows requests from our React app in localhost:3000
-CORS(app, resources={r"*": {"origins": "http://localhost:3000"}})
+# CHANGE WHEN DEPLOYING TO EXACT PORT
+CORS(app, resources={r"*": {"origins": "http://localhost:8000"}})
 
 # Remove to deploy
 url = "http://localhost:8080/serverapi"
@@ -211,4 +212,4 @@ def send_command():
 
 
 if __name__ == '__main__':
-    app.run(use_reloader=True, port=4000, threaded=True)
+    app.run(use_reloader=True, port=8000, host="0.0.0.0" threaded=True)
