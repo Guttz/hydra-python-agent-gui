@@ -43,6 +43,7 @@ const CssTextField = withStyles({
 const styles = theme => ({
     outContainer: {
         backgroundColor: GuiTheme.palette.primary.dark,
+        height: '88vh',
     },
     propertiesContainer: {
         maxHeight: '40vh',
